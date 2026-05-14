@@ -221,22 +221,31 @@ export default function App() {
               {selectedProduct.description}
             </p>
 
-            <div className="space-y-3 mb-8">
-              <p>
-                <strong>Peso:</strong>{" "}
-                {selectedProduct.details?.weight}
-              </p>
+            <div className="space-y-4 mb-8 text-sm">
+            <div>
+              <p className="text-gray-400 text-xs uppercase">Peso</p>
+              <p className="font-semibold">{selectedProduct.details?.weight}</p>
+           </div>
 
-              <p>
-                <strong>Serve:</strong>{" "}
-                {selectedProduct.details?.serves}
-              </p>
+           <div>
+              <p className="text-gray-400 text-xs uppercase">Serve</p>
+              <p className="font-semibold">{selectedProduct.details?.serves}</p>
+           </div>
 
-              <p>
-                <strong>Ingredientes:</strong>{" "}
-                {selectedProduct.details?.ingredients}
-              </p>
-            </div>
+           <div>
+              <p className="text-gray-400 text-xs uppercase mb-2">Ingredientes</p>
+
+              <div className="flex flex-wrap gap-2">
+               {selectedProduct.details?.ingredients?.map((ing) => (
+                 <span
+                   key={ing}
+                   className="bg-yellow-500/10 text-yellow-200 border border-yellow-500/20 px-3 py-1 rounded-full text-xs">
+                    {ing}
+                  </span>
+               ))}
+             </div>
+           </div>
+          </div>
 
             <button
               onClick={() => handlePedido(selectedProduct.name)}
