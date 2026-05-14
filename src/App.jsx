@@ -179,11 +179,11 @@ export default function App() {
       className="fixed inset-0 z-50 bg-black/70 backdrop-blur-md flex items-center justify-center p-4"
     >
       <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
-        className="bg-[#24150f] border border-[#4a3022] rounded-[32px] max-w-5xl w-full overflow-hidden relative"
-      >
+       initial={{ scale: 0.9, opacity: 0 }}
+       animate={{ scale: 1, opacity: 1 }}
+       exit={{ scale: 0.9, opacity: 0 }}
+       // Mudei de max-w-5xl para max-w-lg (ou max-w-md se quiser ainda menor)
+      className="bg-[#24150f] border border-[#4a3022] rounded-[32px] max-w-lg w-[95%] overflow-hidden relative">
         <button
           onClick={() => setSelectedProduct(null)}
           className="absolute top-4 right-4 z-50 bg-black/40 p-2 rounded-full"
@@ -202,8 +202,8 @@ export default function App() {
                 <img
                   src={selectedProduct.image}
                   alt={selectedProduct.name}
-                  className="w-full h-[500px] object-cover"
-                />
+                  // Ajuste o h-[500px] para algo menor, como h-[350px] ou h-[400px]
+                  className="w-full h-[350px] object-cover"/>
               </SwiperSlide>
             </Swiper>
           </div>
