@@ -1,45 +1,17 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
-  ShoppingCart,
   Phone,
   CakeSlice,
   Camera,
   Share2,
   Music,
 } from "lucide-react";
+import { STORE_CONFIG } from "./config/store";
+import { X } from "lucide-react";
+import { products } from "./data/products";
 
 const categories = ["Bolos Caseiros", "Piscininhas", "Salgados"];
-
-const products = [
-  { id: 1, name: "Paçoca", category: "Bolos Caseiros", price: "R$ 18", image: "pacoca.jpeg", description: "Sabor marcante e cremoso de paçoca caseira." },
-  { id: 2, name: "Morango", category: "Bolos Caseiros", price: "R$ 18", image: "morango.jpeg", description: "Bolo delicado com aroma e cor suave de morango." },
-  { id: 3, name: "Abacaxi", category: "Bolos Caseiros", price: "R$ 18", image: "abacaxi.jpeg", description: "Sabor tropical com pedaços suculentos de abacaxi." },
-  { id: 4, name: "Coco", category: "Bolos Caseiros", price: "R$ 18", image: "coco.jpeg", description: "Sabor leve e úmido, com coco ralado no preparo." },
-  { id: 5, name: "Formigueiro", category: "Bolos Caseiros", price: "R$ 18", image: "formigueiro.jpeg", description: "Bolo macio com granulado de chocolate misturado na massa." },
-  { id: 6, name: "Fubá com Coco", category: "Bolos Caseiros", price: "R$ 18", image: "fubacomcoco.jpeg", description: "Mistura leve de fubá e coco ralado." },
-  { id: 7, name: "Fubá com Erva-doce", category: "Bolos Caseiros", price: "R$ 18", image: "fubacomervadoce.jpeg", description: "Um toque aromático de erva-doce no bolo de fubá." },
-  { id: 8, name: "Mesclado", category: "Bolos Caseiros", price: "R$ 18", image: "mesclado.jpeg", description: "Combinação de massas branca e de chocolate." },
-  { id: 9, name: "Cenoura", category: "Bolos Caseiros", price: "R$ 22", image: "cenoura.jpeg", description: "Massa leve com cobertura farta de chocolate." },
-  { id: 10, name: "Banana", category: "Bolos Caseiros", price: "R$ 22", image: "banana.jpeg", description: "Feito com bananas maduras e pitada de canela." },
-  { id: 11, name: "Churros", category: "Bolos Caseiros", price: "R$ 22", image: "churros.jpeg", description: "Recheado com doce de leite e polvilhado com açúcar e canela." },
-  { id: 12, name: "Fubá com Goiabada", category: "Bolos Caseiros", price: "R$ 22", image: "goiabada.jpeg", description: "Bolo de fubá com cubos de goiabada derretendo por dentro." },
-  { id: 13, name: "Milho Cremoso", category: "Bolos Caseiros", price: "R$ 22", image: "milhocremoso.jpeg", description: "Bolo macio com sabor intenso de milho." },
-  { id: 14, name: "Ninho", category: "Bolos Caseiros", price: "R$ 22", image: "ninho.jpeg", description: "Macio com leite Ninho na massa e cobertura cremosa por cima." },
-  { id: 15, name: "Aipim", category: "Bolos Caseiros", price: "R$ 25", image: "aipim.jpeg", description: "Bolo macio e úmido, feito com mandioca ralada." },
-  { id: 16, name: "Abacaxi com Coco", category: "Bolos Caseiros", price: "R$ 25", image: "abacaxicomcoco.jpeg", description: "Pedaços macios na massa finalizado com coco cremoso." },
-  { id: 17, name: "Chocolate Premium", category: "Bolos Caseiros", price: "R$ 25", image: "chocolatepremium.jpeg", description: "Bolo de chocolate com gotas e brigadeiro cremoso." },
-  { id: 18, name: "Limão", category: "Piscininhas", price: "R$ 18", image: "piscininhadelimao.jpeg", description: "Sabor cítrico e refrescante com cobertura cremosa." },
-  { id: 19, name: "Limão e Brigadeiro", category: "Piscininhas", price: "R$ 22", image: "plimaocombrigadeiro.jpeg", description: "Combinação de brigadeiro com toque cítrico." },
-  { id: 20, name: "Brigadeiro", category: "Piscininhas", price: "R$ 22", image: "piscininhadebrigadeiro.jpeg", description: "Clássico com cobertura cremosa e granulados." },
-  { id: 21, name: "Brigadeiro Branco e Preto", category: "Piscininhas", price: "R$ 22", image: "brigadeirobrancoepreto.jpeg", description: "Duas camadas: brigadeiro branco e tradicional." },
-  { id: 22, name: "Maracujá", category: "Piscininhas", price: "R$ 22", image: "piscininhademaracuja.jpeg", description: "Recheio suave feito com polva natural da fruta." },
-  { id: 23, name: "Ninho Piscininha", category: "Piscininhas", price: "R$ 22", image: "piscininhadeninho.jpeg", description: "Leite Ninho na massa e cobertura transbordando." },
-  { id: 24, name: "Ninho e Brigadeiro", category: "Piscininhas", price: "R$ 22", image: "pninhocombrigadeiro.jpeg", description: "Mistura irresistível de chocolate e leite ninho." },
-  { id: 25, name: "Maracujá e Brigadeiro", category: "Piscininhas", price: "R$ 22", image: "pmaracujacombrigadeiro.jpeg", description: "Equilíbrio entre o doce e o azedinho." },
-  { id: 26, name: "Cenoura Piscininha", category: "Piscininhas", price: "R$ 22", image: "pcenoura.jpeg", description: "Bolo de cenoura fofinho com muito brigadeiro." },
-  { id: 27, name: "Prestígio", category: "Piscininhas", price: "R$ 22", image: "pprestigio.jpeg", description: "Massa de chocolate, recheio de coco e cobertura cremosa." }
-];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -47,6 +19,7 @@ const fadeUp = {
 };
 
 export default function App() {
+  const [visibleCount, setVisibleCount] = useState(6);
   const [activeCategory, setActiveCategory] = useState("Bolos Caseiros");
 
   const filteredProducts = products.filter(
@@ -54,7 +27,7 @@ export default function App() {
   );
 
   const handlePedido = (nomeDoBolo) => {
-    const celular = "5521991382676";
+    const celular = STORE_CONFIG.whatsapp;
     const texto = `Olá! Gostaria de encomendar o ${nomeDoBolo} que vi no site.`;
     const linkZap = `https://wa.me/${celular}?text=${encodeURIComponent(texto)}`;
     window.open(linkZap, "_blank");
@@ -81,7 +54,7 @@ export default function App() {
               Receita de família • Feito artesanalmente
             </span>
             <h1 className="text-5xl lg:text-7xl font-black leading-tight">
-              Delícias do José
+            {STORE_CONFIG.name}
             </h1>
             <p className="text-lg lg:text-2xl text-[#d9c2ad] leading-relaxed max-w-xl">
               Bolos incrivelmente fofinhos, coberturas generosas e sabores que
@@ -89,7 +62,7 @@ export default function App() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
               <a
-                href="https://wa.me/5521991382676"
+                href={`https://wa.me/${STORE_CONFIG.whatsapp}`}
                 className="bg-yellow-500 text-black px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-2xl w-full sm:w-auto"              >
                 <Phone size={20} /> Chamar no WhatsApp
               </a>
@@ -124,7 +97,7 @@ export default function App() {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => {setActiveCategory(category);setVisibleCount(6);}}
               className={`px-6 py-3 rounded-2xl font-semibold transition-all duration-300 ${
                 activeCategory === category
                   ? "bg-yellow-500 text-black scale-105"
@@ -150,7 +123,7 @@ export default function App() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            {filteredProducts.map((product) => (
+            {filteredProducts.slice(0, visibleCount).map((product) => (
               <div
                 key={product.id}
                 className="bg-[#2a1911]/90 border border-[#4a3022] rounded-[32px] overflow-hidden backdrop-blur-md shadow-2xl"
@@ -177,7 +150,19 @@ export default function App() {
                 </div>
               </div>
             ))}
-          </div>
+            </div>
+
+            {visibleCount < filteredProducts.length && (
+            <div className="flex justify-center mt-14">
+              <button
+                onClick={() => setVisibleCount((prev) => prev + 6)}
+                className="bg-yellow-500 text-black px-8 py-4 rounded-2xl font-bold hover:scale-105 transition-all duration-300"
+              >
+                Mostrar mais
+              </button>
+            </div>
+          )}
+
         </div>
       </section>
 
