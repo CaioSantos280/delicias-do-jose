@@ -10,6 +10,14 @@ import {
 import { STORE_CONFIG } from "./config/store";
 import { X } from "lucide-react";
 import { products } from "./data/products";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronRight, X } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const categories = ["Bolos Caseiros", "Piscininhas", "Salgados"];
 
@@ -21,6 +29,7 @@ const fadeUp = {
 export default function App() {
   const [visibleCount, setVisibleCount] = useState(6);
   const [activeCategory, setActiveCategory] = useState("Bolos Caseiros");
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const filteredProducts = products.filter(
     (item) => item.category === activeCategory
@@ -141,11 +150,8 @@ export default function App() {
                     </span>
                   </div>
                   <p className="text-[#cdb7a2]">{product.description}</p>
-                  <button
-                    onClick={() => handlePedido(product.name)}
-                    className="w-full bg-yellow-500 text-black py-4 rounded-2xl font-bold"
-                  >
-                    Pedir Agora
+                  <button onClick={() => setSelectedProduct(product)} className="w-full bg-yellow-500 text-black py-4 rounded-2xl font-bold flex items-center justify-center gap-2">
+                  Ver Mais <ChevronRight size={18} />
                   </button>
                 </div>
               </div>
@@ -165,6 +171,87 @@ export default function App() {
 
         </div>
       </section>
+
+      <AnimatePresence>
+  {selectedProduct && (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-50 bg-black/70 backdrop-blur-md flex items-center justify-center p-4"
+    >
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.9, opacity: 0 }}
+        className="bg-[#24150f] border border-[#4a3022] rounded-[32px] max-w-5xl w-full overflow-hidden relative"
+      >
+        <button
+          onClick={() => setSelectedProduct(null)}
+          className="absolute top-4 right-4 z-50 bg-black/40 p-2 rounded-full"
+        >
+          <X />
+        </button>
+
+        <div className="grid lg:grid-cols-2">
+          <div className="bg-black">
+            <Swiper
+              modules={[Navigation, Pagination]}
+              navigation
+              pagination={{ clickable: true }}
+            >
+              <SwiperSlide>
+                <img
+                  src={selectedProduct.image}
+                  alt={selectedProduct.name}
+                  className="w-full h-[500px] object-cover"
+                />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+
+          <div className="p-8 flex flex-col justify-center">
+            <span className="text-yellow-400 uppercase text-sm mb-2">
+              {selectedProduct.category}
+            </span>
+
+            <h2 className="text-4xl font-black mb-4">
+              {selectedProduct.name}
+            </h2>
+
+            <p className="text-[#d9c2ad] mb-6">
+              {selectedProduct.description}
+            </p>
+
+            <div className="space-y-3 mb-8">
+              <p>
+                <strong>Peso:</strong>{" "}
+                {selectedProduct.details?.weight}
+              </p>
+
+              <p>
+                <strong>Serve:</strong>{" "}
+                {selectedProduct.details?.serves}
+              </p>
+
+              <p>
+                <strong>Ingredientes:</strong>{" "}
+                {selectedProduct.details?.ingredients}
+              </p>
+            </div>
+
+            <button
+              onClick={() => handlePedido(selectedProduct.name)}
+              className="bg-yellow-500 text-black py-4 rounded-2xl font-bold"
+            >
+              Pedir no WhatsApp
+            </button>
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
 
       {/* FOOTER */}
       <footer className="border-t border-[#3c2619] px-6 lg:px-20 py-12">
