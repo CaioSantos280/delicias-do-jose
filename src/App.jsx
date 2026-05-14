@@ -233,8 +233,9 @@ export default function App() {
               </p>
 
               <p>
-                <strong>Ingredientes:</strong>{" "}
-                {selectedProduct.details?.ingredients}
+                {product.details?.ingredients?.map((ing) => (
+  <span key={ing}>{ing}</span>
+))}
               </p>
             </div>
 
