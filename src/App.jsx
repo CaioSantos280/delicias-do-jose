@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import {
   Phone,
   CakeSlice,
@@ -8,7 +7,6 @@ import {
   Music,
 } from "lucide-react";
 import { STORE_CONFIG } from "./config/store";
-import { X } from "lucide-react";
 import { products } from "./data/products";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronRight, X } from "lucide-react";
