@@ -108,7 +108,7 @@ export const products = [
     name: "Amendoim",
     category: "Bolos Caseiros",
     price: "R$ 18",
-    image: "aamendoim-new.jpeg",
+    image: "amendoim-new.jpeg",
     description: "Coberto com leite condensado, chocolate e amendoim triturado.",
     details: {
       weight: "900g",
