@@ -105,6 +105,19 @@ export const products = [
   },
   {
     id: 9,
+    name: "Amendoim",
+    category: "Bolos Caseiros",
+    price: "R$ 18",
+    image: "aamendoim-new.jpeg",
+    description: "Coberto com leite condensado, chocolate e amendoim triturado.",
+    details: {
+      weight: "900g",
+      serves: "4 pessoas",
+      ingredients: ["Amendoim, Leite condensado e chocolate"]
+    }
+  },
+  {
+    id: 10,
     name: "Cenoura",
     category: "Bolos Caseiros",
     price: "R$ 22",
@@ -117,7 +130,7 @@ export const products = [
     }
   },
   {
-    id: 10,
+    id: 11,
     name: "Banana",
     category: "Bolos Caseiros",
     price: "R$ 22",
@@ -130,7 +143,7 @@ export const products = [
     }
   },
   {
-    id: 11,
+    id: 12,
     name: "Churros",
     category: "Bolos Caseiros",
     price: "R$ 22",
@@ -143,7 +156,7 @@ export const products = [
     }
   },
   {
-    id: 12,
+    id: 13,
     name: "Fubá com Goiabada",
     category: "Bolos Caseiros",
     price: "R$ 22",
@@ -156,7 +169,7 @@ export const products = [
     }
   },
   {
-    id: 13,
+    id: 14,
     name: "Milho Cremoso",
     category: "Bolos Caseiros",
     price: "R$ 22",
@@ -169,7 +182,7 @@ export const products = [
     }
   },
   {
-    id: 14,
+    id: 15,
     name: "Ninho",
     category: "Bolos Caseiros",
     price: "R$ 22",
@@ -182,7 +195,7 @@ export const products = [
     }
   },
   {
-    id: 15,
+    id: 16,
     name: "Aipim",
     category: "Bolos Caseiros",
     price: "R$ 25",
@@ -195,7 +208,7 @@ export const products = [
     }
   },
   {
-    id: 16,
+    id: 17,
     name: "Abacaxi com Coco",
     category: "Bolos Caseiros",
     price: "R$ 25",
@@ -208,7 +221,7 @@ export const products = [
     }
   },
   {
-    id: 17,
+    id: 18,
     name: "Chocolate Premium",
     category: "Bolos Caseiros",
     price: "R$ 25",
@@ -221,7 +234,7 @@ export const products = [
     }
   },
   {
-    id: 18,
+    id: 19,
     name: "Limão",
     category: "Piscininhas",
     price: "R$ 18",
@@ -234,7 +247,7 @@ export const products = [
     }
   },
   {
-    id: 19,
+    id: 20,
     name: "Limão e Brigadeiro",
     category: "Piscininhas",
     price: "R$ 22",
@@ -247,7 +260,7 @@ export const products = [
     }
   },
   {
-    id: 20,
+    id: 21,
     name: "Brigadeiro",
     category: "Piscininhas",
     price: "R$ 22",
@@ -260,7 +273,7 @@ export const products = [
     }
   },
   {
-    id: 21,
+    id: 22,
     name: "Brigadeiro Branco e Preto",
     category: "Piscininhas",
     price: "R$ 22",
@@ -273,7 +286,7 @@ export const products = [
     }
   },
   {
-    id: 22,
+    id: 23,
     name: "Maracujá",
     category: "Piscininhas",
     price: "R$ 22",
@@ -286,7 +299,7 @@ export const products = [
     }
   },
   {
-    id: 23,
+    id: 24,
     name: "Ninho Piscininha",
     category: "Piscininhas",
     price: "R$ 22",
@@ -299,7 +312,7 @@ export const products = [
     }
   },
   {
-    id: 24,
+    id: 25,
     name: "Ninho e Brigadeiro",
     category: "Piscininhas",
     price: "R$ 22",
@@ -312,7 +325,7 @@ export const products = [
     }
   },
   {
-    id: 25,
+    id: 26,
     name: "Maracujá e Brigadeiro",
     category: "Piscininhas",
     price: "R$ 22",
@@ -325,7 +338,7 @@ export const products = [
     }
   },
   {
-    id: 26,
+    id: 27,
     name: "Cenoura Piscininha",
     category: "Piscininhas",
     price: "R$ 22",
@@ -338,7 +351,7 @@ export const products = [
     }
   },
   {
-    id: 27,
+    id: 28,
     name: "Prestígio",
     category: "Piscininhas",
     price: "R$ 22",

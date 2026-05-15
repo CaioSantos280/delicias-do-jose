@@ -277,7 +277,7 @@ export default function App() {
           <div className="space-y-3">
             <h4 className="font-bold text-lg">Contato</h4>
             <a
-              href="https://wa.me/5521991382676"
+              href={`https://wa.me/${STORE_CONFIG.whatsapp}`}
               target="_blank"
               rel="noreferrer"
               className="text-[#cdb7a2] hover:text-yellow-400 block transition-colors"
@@ -291,7 +291,7 @@ export default function App() {
             <h4 className="font-bold text-lg">Redes Sociais</h4>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com/delicias_do_jose.1"
+                href={`https://instagram.com/${STORE_CONFIG.instagram}`}
                 target="_blank"
                 rel="noreferrer"
                 className="bg-[#3b2417] hover:bg-[#533222] transition-all duration-300 p-3 rounded-xl flex items-center justify-center text-white"
@@ -299,7 +299,7 @@ export default function App() {
                 <Camera size={20} />
               </a>
               <a
-                href="https://www.facebook.com/profile.php?id=61579127274015"
+                href={`https://facebook.com/${STORE_CONFIG.facebook}`}
                 target="_blank"
                 rel="noreferrer"
                 className="bg-[#3b2417] hover:bg-[#533222] transition-all duration-300 p-3 rounded-xl flex items-center justify-center text-white"
@@ -307,7 +307,7 @@ export default function App() {
                 <Share2 size={20} />
               </a>
               <a
-                href="https://tiktok.com/@delicias_do_jose.1"
+                href={`https://tiktok.com/@${STORE_CONFIG.tiktok}`}
                 target="_blank"
                 rel="noreferrer"
                 className="bg-[#3b2417] hover:bg-[#533222] transition-all duration-300 p-3 rounded-xl flex items-center justify-center text-white"
@@ -315,7 +315,7 @@ export default function App() {
                 <Music size={20} />
               </a>
               <a
-                href="https://wa.me/5521991382676"
+                href={`https://wa.me/${STORE_CONFIG.whatsapp}`}
                 target="_blank"
                 rel="noreferrer"
                 className="bg-[#3b2417] hover:bg-[#533222] transition-all duration-300 p-3 rounded-xl flex items-center justify-center text-white"
