@@ -43,7 +43,7 @@ export const products = [
     name: "Coco",
     category: "Bolos Caseiros",
     price: "R$ 18",
-    image: "coco.jpeg",
+    image: "coco3.jpeg",
     description: "Sabor leve e úmido, com coco ralado no preparo.",
     details: {
       weight: "900g",
