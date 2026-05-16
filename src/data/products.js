@@ -4,12 +4,15 @@ export const products = [
     name: "Paçoca",
     category: "Bolos Caseiros",
     price: "R$ 18",
-    image: "pacoca.jpeg",
+    media: [{
+      type: "image",
+      src: "pacoca.jpeg"
+    }],
     description: "Sabor marcante e cremoso de paçoca caseira.",
     details: {
       weight: "900g",
       serves: "4 pessoas",
-      ingredients: ["Paçoca, Leite condensado e Massa fofinha"]
+      ingredients: ["Paçoca", "Leite condensado", "Massa fofinha"]
     }
   },
   {
@@ -17,7 +20,10 @@ export const products = [
     name: "Morango",
     category: "Bolos Caseiros",
     price: "R$ 18",
-    image: "morango.jpeg",
+    media: [{
+      type: "image",
+      src: "morango.jpeg"
+    }],
     description: "Bolo delicado com aroma e cor suave de morango.",
     details: {
       weight: "900g",
@@ -30,7 +36,10 @@ export const products = [
     name: "Abacaxi",
     category: "Bolos Caseiros",
     price: "R$ 18",
-    image: "abacaxi.jpeg",
+    media: [{
+      type: "image",
+      src: "abacaxi.jpeg"
+    }],
     description: "Sabor tropical com pedaços suculentos de abacaxi.",
     details: {
       weight: "900g",
@@ -43,7 +52,10 @@ export const products = [
     name: "Coco",
     category: "Bolos Caseiros",
     price: "R$ 18",
-    image: "coco3.jpeg",
+    media: [{
+      type: "image",
+      src: "coco3.jpeg"
+    }],
     description: "Sabor leve e úmido, com coco ralado no preparo.",
     details: {
       weight: "900g",
@@ -56,7 +68,10 @@ export const products = [
     name: "Formigueiro",
     category: "Bolos Caseiros",
     price: "R$ 18",
-    image: "formigueiro.jpeg",
+    media: [{
+      type: "image",
+      src: "formigueiro.jpeg"
+    }],
     description: "Bolo macio com granulado de chocolate misturado na massa.",
     details: {
       weight: "900g",
@@ -69,7 +84,10 @@ export const products = [
     name: "Fubá com Coco",
     category: "Bolos Caseiros",
     price: "R$ 18",
-    image: "fubacomcoco.jpeg",
+    media: [{
+      type: "image",
+      src: "fubacomcoco.jpeg"
+    }],
     description: "Mistura leve de fubá e coco ralado.",
     details: {
       weight: "900g",
@@ -82,7 +100,10 @@ export const products = [
     name: "Fubá com Erva-doce",
     category: "Bolos Caseiros",
     price: "R$ 18",
-    image: "fubacomervadoce.jpeg",
+    media: [{
+      type: "image",
+      src: "fubacomervadoce.jpeg"
+    }],
     description: "Um toque aromático de erva-doce no bolo de fubá.",
     details: {
       weight: "900g",
@@ -95,7 +116,10 @@ export const products = [
     name: "Mesclado",
     category: "Bolos Caseiros",
     price: "R$ 18",
-    image: "mesclado.jpeg",
+    media: [{
+      type: "image",
+      src: "mesclado.jpeg"
+    }],
     description: "Combinação de massas branca e de chocolate.",
     details: {
       weight: "900g",
@@ -108,7 +132,10 @@ export const products = [
     name: "Amendoim",
     category: "Bolos Caseiros",
     price: "R$ 18",
-    image: "amendoim-new.jpeg",
+    media: [{
+      type: "image",
+      src: "amendoim-new.jpeg"
+    }],
     description: "Coberto com leite condensado, chocolate e amendoim triturado.",
     details: {
       weight: "900g",
@@ -121,7 +148,10 @@ export const products = [
     name: "Cenoura",
     category: "Bolos Caseiros",
     price: "R$ 22",
-    image: "cenoura.jpeg",
+    media: [{
+      type: "image",
+      src: "cenoura.jpeg"
+    }],
     description: "Massa leve com cobertura farta de chocolate.",
     details: {
       weight: "1kg",
@@ -134,7 +164,10 @@ export const products = [
     name: "Banana",
     category: "Bolos Caseiros",
     price: "R$ 22",
-    image: "banana.jpeg",
+    media: [{
+      type: "image",
+      src: "banana.jpeg"
+    }],
     description: "Feito com bananas maduras e pitada de canela.",
     details: {
       weight: "1kg",
@@ -147,7 +180,10 @@ export const products = [
     name: "Churros",
     category: "Bolos Caseiros",
     price: "R$ 22",
-    image: "churros.jpeg",
+    media: [{
+      type: "image",
+      src: "churros.jpeg"
+    }],
     description: "Recheado com doce de leite e açúcar com canela.",
     details: {
       weight: "1kg",
@@ -160,7 +196,10 @@ export const products = [
     name: "Fubá com Goiabada",
     category: "Bolos Caseiros",
     price: "R$ 22",
-    image: "goiabada.jpeg",
+    media: [{
+      type: "image",
+      src: "goiabada.jpeg"
+    }],
     description: "Bolo de fubá com cubos de goiabada.",
     details: {
       weight: "1kg",
@@ -173,7 +212,10 @@ export const products = [
     name: "Milho Cremoso",
     category: "Bolos Caseiros",
     price: "R$ 22",
-    image: "milhocremoso.jpeg",
+    media: [{
+      type: "image",
+      src: "milhocremoso.jpeg"
+    }],
     description: "Bolo macio com sabor intenso de milho.",
     details: {
       weight: "1kg",
@@ -186,7 +228,10 @@ export const products = [
     name: "Ninho",
     category: "Bolos Caseiros",
     price: "R$ 22",
-    image: "ninho.jpeg",
+    media: [{
+      type: "image",
+      src: "ninho.jpeg"
+    }],
     description: "Leite Ninho na massa e cobertura cremosa.",
     details: {
       weight: "1kg",
@@ -199,7 +244,10 @@ export const products = [
     name: "Aipim",
     category: "Bolos Caseiros",
     price: "R$ 25",
-    image: "aipim.jpeg",
+    media: [{
+      type: "image",
+      src: "aipim.jpeg"
+    }],
     description: "Bolo macio e úmido de mandioca.",
     details: {
       weight: "1.2kg",
@@ -212,7 +260,10 @@ export const products = [
     name: "Abacaxi com Coco",
     category: "Bolos Caseiros",
     price: "R$ 25",
-    image: "abacaxicomcoco.jpeg",
+    media: [{
+      type: "image",
+      src: "abacaxicomcoco.jpeg"
+    }],
     description: "Abacaxi com coco cremoso.",
     details: {
       weight: "1.2kg",
@@ -225,7 +276,10 @@ export const products = [
     name: "Chocolate Premium",
     category: "Bolos Caseiros",
     price: "R$ 25",
-    image: "chocolatepremium.jpeg",
+    media: [{
+      type: "image",
+      src: "chocolatepremium.jpeg"
+    }],
     description: "Chocolate intenso com cobertura cremosa.",
     details: {
       weight: "1.2kg",
@@ -238,7 +292,10 @@ export const products = [
     name: "Limão",
     category: "Piscininhas",
     price: "R$ 18",
-    image: "piscininhadelimao.jpeg",
+    media: [{
+      type: "image",
+      src: "piscininhadelimao.jpeg"
+    }],
     description: "Cítrico e refrescante.",
     details: {
       weight: "900g",
@@ -251,7 +308,10 @@ export const products = [
     name: "Limão e Brigadeiro",
     category: "Piscininhas",
     price: "R$ 22",
-    image: "plimaocombrigadeiro.jpeg",
+    media: [{
+      type: "image",
+      src: "plimaocombrigadeiro.jpeg"
+    }],
     description: "Doce e cítrico equilibrado.",
     details: {
       weight: "1kg",
@@ -264,7 +324,10 @@ export const products = [
     name: "Brigadeiro",
     category: "Piscininhas",
     price: "R$ 22",
-    image: "piscininhadebrigadeiro.jpeg",
+    media: [{
+      type: "image",
+      src: "piscininhadebrigadeiro.jpeg"
+    }],
     description: "Clássico brigadeiro cremoso.",
     details: {
       weight: "1kg",
@@ -277,7 +340,10 @@ export const products = [
     name: "Brigadeiro Branco e Preto",
     category: "Piscininhas",
     price: "R$ 22",
-    image: "brigadeirobrancoepreto.jpeg",
+    media: [{
+      type: "image",
+      src: "brigadeirobrancoepreto.jpeg"
+    }],
     description: "Duas camadas de chocolate.",
     details: {
       weight: "1kg",
@@ -290,7 +356,10 @@ export const products = [
     name: "Maracujá",
     category: "Piscininhas",
     price: "R$ 22",
-    image: "piscininhademaracuja.jpeg",
+    media: [{
+      type: "image",
+      src: "piscininhademaracuja.jpeg"
+    }],
     description: "Azedinho equilibrado.",
     details: {
       weight: "1kg",
@@ -303,7 +372,10 @@ export const products = [
     name: "Ninho Piscininha",
     category: "Piscininhas",
     price: "R$ 22",
-    image: "piscininhadeninho.jpeg",
+    media: [{
+      type: "image",
+      src: "piscininhadeninho.jpeg"
+    }],
     description: "Leite Ninho cremoso.",
     details: {
       weight: "1kg",
@@ -316,7 +388,10 @@ export const products = [
     name: "Ninho e Brigadeiro",
     category: "Piscininhas",
     price: "R$ 22",
-    image: "pninhocombrigadeiro.jpeg",
+    media: [{
+      type: "image",
+      src: "pninhocombrigadeiro.jpeg"
+    }],
     description: "Chocolate + Ninho.",
     details: {
       weight: "1kg",
@@ -329,7 +404,10 @@ export const products = [
     name: "Maracujá e Brigadeiro",
     category: "Piscininhas",
     price: "R$ 22",
-    image: "pmaracujacombrigadeiro.jpeg",
+    media: [{
+      type: "image",
+      src: "pmaracujacombrigadeiro.jpeg"
+    }],
     description: "Doce e azedo equilibrado.",
     details: {
       weight: "1kg",
@@ -342,7 +420,10 @@ export const products = [
     name: "Cenoura Piscininha",
     category: "Piscininhas",
     price: "R$ 22",
-    image: "pcenoura.jpeg",
+    media: [{
+      type: "image",
+      src: "pcenoura.jpeg"
+    }],
     description: "Cenoura com muito chocolate.",
     details: {
       weight: "1kg",
@@ -355,7 +436,10 @@ export const products = [
     name: "Prestígio",
     category: "Piscininhas",
     price: "R$ 22",
-    image: "pprestigio.jpeg",
+    media: [{
+      type: "image",
+      src: "pprestigio.jpeg"
+    }],
     description: "Chocolate com coco.",
     details: {
       weight: "1kg",
@@ -363,4 +447,4 @@ export const products = [
       ingredients: ["Chocolate e Coco"]
     }
   }
-]
+];

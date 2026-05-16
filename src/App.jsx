@@ -17,7 +17,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const categories = ["Bolos Caseiros", "Piscininhas", "Salgados"];
+const categories = ["Bolos Caseiros", "Piscininhas"];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -136,7 +136,7 @@ export default function App() {
                 className="bg-[#2a1911]/90 border border-[#4a3022] rounded-[32px] overflow-hidden backdrop-blur-md shadow-2xl"
               >
                 <img
-                  src={product.image}
+                  src={`/${product.media?.[0]?.src}`}
                   alt={product.name}
                   className="w-full aspect-[4/5] object-cover"
                 />
@@ -191,20 +191,34 @@ export default function App() {
           <X />
         </button>
 
-        <div className="grid lg:grid-cols-2">
+        <div className="flex flex-col">
           <div className="bg-black">
             <Swiper
               modules={[Navigation, Pagination]}
               navigation
               pagination={{ clickable: true }}
             >
-              <SwiperSlide>
-                <img
-                  src={selectedProduct.image}
-                  alt={selectedProduct.name}
-                  // Ajuste o h-[500px] para algo menor, como h-[350px] ou h-[400px]
-                  className="w-full h-[350px] object-cover"/>
-              </SwiperSlide>
+              {selectedProduct.media?.map((item, index) => (
+                <SwiperSlide key={index}>
+                  {item.type === "image" ? (
+                    <img
+                      src={`/${item.src}`}
+                      alt={selectedProduct.name}
+                      className="w-full h-[350px] object-cover"
+                    />
+                  ) : (
+                    <video
+                      src={`/${item.src}`}
+                      controls
+                      preload="metadata"
+                      muted
+                      loop
+                      playsInline
+                      className="w-full h-[350px] object-cover"
+                    />
+                  )}
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
 
@@ -236,9 +250,9 @@ export default function App() {
               <p className="text-gray-400 text-xs uppercase mb-2">Ingredientes</p>
 
               <div className="flex flex-wrap gap-2">
-               {selectedProduct.details?.ingredients?.map((ing) => (
+               {selectedProduct.details?.ingredients?.map((ing, index) => (
                  <span
-                   key={ing}
+                   key={`${ing}-${index}`}
                    className="bg-yellow-500/10 text-yellow-200 border border-yellow-500/20 px-3 py-1 rounded-full text-xs">
                     {ing}
                   </span>
@@ -266,7 +280,9 @@ export default function App() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <CakeSlice className="text-yellow-400" />
-              <h3 className="text-2xl font-black"> Delícias do José </h3>
+              <h3 className="text-2xl font-black">
+                {STORE_CONFIG.name}
+              </h3>
             </div>
             <p className="text-[#bca38f] max-w-sm">
               Bolos caseiros e piscininhas feitas pra impressionar no sabor e no
