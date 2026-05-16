@@ -102,17 +102,17 @@ export default function App() {
       handlePedido={handlePedido}
     />
         {/* REVIEWS */}
-<section id="avaliacoes" className="px-6 lg:px-20 py-20">
+<section id="avaliacoes" className="px-6 lg:px-20 py-24 bg-[#1a0f0b]">
   <div className="max-w-7xl mx-auto text-center mb-14">
     <h2 className="text-4xl lg:text-5xl font-black">
       O que nossos clientes dizem
     </h2>
     <p className="text-[#cdb7a2] mt-4 text-lg">
-      Feedback real de quem já provou e voltou a pedir.
+      Feedback real de clientes que já pediram e voltaram.
     </p>
   </div>
 
-  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
     {reviews
       .slice(0, visibleReviews)
       .map((review) => (
@@ -130,7 +130,7 @@ export default function App() {
         onClick={() => setVisibleReviews((prev) => prev + 3)}
         className="bg-yellow-500 text-black px-8 py-4 rounded-2xl font-bold hover:scale-105 transition-all duration-300"
       >
-        Mostrar mais
+        Ver mais avaliações
       </button>
     </div>
   )}

@@ -291,7 +291,7 @@ export const products = [
     id: 19,
     name: "Piscininha de Limão",
     category: "Piscininhas",
-    price: "R$ 18",
+    price: "R$ 22",
     media: [{
       type: "image",
       src: "piscininhadelimao.jpeg"
@@ -431,7 +431,7 @@ export const products = [
     description: "Cenoura com muito chocolate.",
     details: {
       weight: "1kg",
-      serves: "4 pessoas",
+      serves: "5 pessoas",
       ingredients: ["Cenoura", "Brigadeiro"]
     }
   },
