@@ -9,6 +9,7 @@ import { products } from "./data/products";
 
 import ProductModal from "./components/ProductModal";
 import ProductCard from "./components/ProductCard";
+import Footer from "./components/Footer";
 
 const categories = ["Bolos Caseiros", "Piscininhas"];
 
