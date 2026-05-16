@@ -28,7 +28,7 @@ export const products = [
     details: {
       weight: "900g",
       serves: "4 pessoas",
-      ingredients: ["Morango, Leite condensado e Creme suave"]
+      ingredients: ["Morango", "Leite condensado", "Creme suave"]
     }
   },
   {
@@ -44,7 +44,7 @@ export const products = [
     details: {
       weight: "900g",
       serves: "4 pessoas",
-      ingredients: ["Abacaxi, Açúcar e Massa fofinha"]
+      ingredients: ["Abacaxi", "Açúcar", "Massa fofinha"]
     }
   },
   {
@@ -60,7 +60,7 @@ export const products = [
     details: {
       weight: "900g",
       serves: "4 pessoas",
-      ingredients: ["Coco ralado, Leite condensado e Massa branca"]
+      ingredients: ["Coco ralado", "Leite condensado", "Massa branca"]
     }
   },
   {
@@ -76,7 +76,7 @@ export const products = [
     details: {
       weight: "900g",
       serves: "4 pessoas",
-      ingredients: ["Chocolate, granulado Massa branca e Cacau"]
+      ingredients: ["Chocolate granulado", "Massa branca", "Cacau"]
     }
   },
   {
@@ -92,7 +92,7 @@ export const products = [
     details: {
       weight: "900g",
       serves: "4 pessoas",
-      ingredients: ["Fubá, Coco e Leite"]
+      ingredients: ["Fubá", "Coco", "Leite"]
     }
   },
   {
@@ -108,7 +108,7 @@ export const products = [
     details: {
       weight: "900g",
       serves: "4 pessoas",
-      ingredients: ["Fubá, Erva-doce e Leite"]
+      ingredients: ["Fubá", "Erva-doce", "Leite"]
     }
   },
   {
@@ -124,7 +124,7 @@ export const products = [
     details: {
       weight: "900g",
       serves: "4 pessoas",
-      ingredients: ["Chocolate, Baunilha e Massa mesclada"]
+      ingredients: ["Chocolate", "Baunilha", "Massa mesclada"]
     }
   },
   {
@@ -140,7 +140,7 @@ export const products = [
     details: {
       weight: "900g",
       serves: "4 pessoas",
-      ingredients: ["Amendoim, Leite condensado e chocolate"]
+      ingredients: ["Amendoim", "Leite condensado", "Chocolate"]
     }
   },
   {
@@ -156,7 +156,7 @@ export const products = [
     details: {
       weight: "1kg",
       serves: "4 pessoas",
-      ingredients: ["Cenoura, Chocolate e Massa fofinha"]
+      ingredients: ["Cenoura", "Chocolate", "Massa fofinha"]
     }
   },
   {
@@ -172,7 +172,7 @@ export const products = [
     details: {
       weight: "1kg",
       serves: "4 pessoas",
-      ingredients: ["Banana, Canela e Massa caseira"]
+      ingredients: ["Banana", "Canela", "Massa caseira"]
     }
   },
   {
@@ -188,7 +188,7 @@ export const products = [
     details: {
       weight: "1kg",
       serves: "4 pessoas",
-      ingredients: ["Doce de leite, Canela e Açúcar"]
+      ingredients: ["Doce de leite", "Canela", "Açúcar"]
     }
   },
   {
@@ -204,7 +204,7 @@ export const products = [
     details: {
       weight: "1kg",
       serves: "4 pessoas",
-      ingredients: ["Fubá, Goiabada e Leite"]
+      ingredients: ["Fubá", "Goiabada", "Leite"]
     }
   },
   {
@@ -220,7 +220,7 @@ export const products = [
     details: {
       weight: "1kg",
       serves: "4 pessoas",
-      ingredients: ["Milho, Leite condensado e Coco opcional"]
+      ingredients: ["Milho", "Leite condensado", "Coco"]
     }
   },
   {
@@ -236,7 +236,7 @@ export const products = [
     details: {
       weight: "1kg",
       serves: "4 pessoas",
-      ingredients: ["Leite Ninho, Leite condensado e Creme"]
+      ingredients: ["Leite Ninho", "Leite condensado", "Creme"]
     }
   },
   {
@@ -252,7 +252,7 @@ export const products = [
     details: {
       weight: "1.2kg",
       serves: "4 pessoas",
-      ingredients: ["Aipim (mandioca), Coco e Leite condensado"]
+      ingredients: ["Aipim (mandioca)", "Coco", "Leite condensado"]
     }
   },
   {
@@ -268,7 +268,7 @@ export const products = [
     details: {
       weight: "1.2kg",
       serves: "4 pessoas",
-      ingredients: ["Abacaxi, Coco e Creme doce"]
+      ingredients: ["Abacaxi", "Coco", "Creme doce"]
     }
   },
   {
@@ -284,7 +284,7 @@ export const products = [
     details: {
       weight: "1.2kg",
       serves: "4 pessoas",
-      ingredients: ["Chocolate 70%, Brigadeiro e Cacau"]
+      ingredients: ["Chocolate 70%", "Brigadeiro", "Cacau"]
     }
   },
   {
@@ -300,7 +300,7 @@ export const products = [
     details: {
       weight: "900g",
       serves: "4 pessoas",
-      ingredients: ["Limão, Creme e Leite condensado"]
+      ingredients: ["Limão", "Creme", "Leite condensado"]
     }
   },
   {
@@ -316,7 +316,7 @@ export const products = [
     details: {
       weight: "1kg",
       serves: "4 pessoas",
-      ingredients: ["Limão, Brigadeiro e Creme"]
+      ingredients: ["Limão", "Brigadeiro", "Creme"]
     }
   },
   {
@@ -332,7 +332,7 @@ export const products = [
     details: {
       weight: "1kg",
       serves: "4 pessoas",
-      ingredients: ["Chocolate, Leite condensado e Cacau"]
+      ingredients: ["Chocolate", "Leite condensado", "Cacau"]
     }
   },
   {
@@ -348,7 +348,7 @@ export const products = [
     details: {
       weight: "1kg",
       serves: "4 pessoas",
-      ingredients: ["Chocolate branco e Chocolate meio amargo"]
+      ingredients: ["Chocolate branco", "Chocolate meio amargo"]
     }
   },
   {
@@ -364,7 +364,7 @@ export const products = [
     details: {
       weight: "1kg",
       serves: "4 pessoas",
-      ingredients: ["Maracujá, Leite condensado e Creme"]
+      ingredients: ["Maracujá", "Leite condensado", "Creme"]
     }
   },
   {
@@ -380,7 +380,7 @@ export const products = [
     details: {
       weight: "1kg",
       serves: "4 pessoas",
-      ingredients: ["Leite Ninho, Leite condensado e Creme"]
+      ingredients: ["Leite Ninho", "Leite condensado", "Creme"]
     }
   },
   {
@@ -396,7 +396,7 @@ export const products = [
     details: {
       weight: "1kg",
       serves: "4 pessoas",
-      ingredients: ["Leite Ninho e Brigadeiro"]
+      ingredients: ["Leite Ninho", "Brigadeiro"]
     }
   },
   {
@@ -412,7 +412,7 @@ export const products = [
     details: {
       weight: "1kg",
       serves: "4 pessoas",
-      ingredients: ["Maracujá e Brigadeiro"]
+      ingredients: ["Maracujá", "Brigadeiro"]
     }
   },
   {
@@ -428,7 +428,7 @@ export const products = [
     details: {
       weight: "1kg",
       serves: "4 pessoas",
-      ingredients: ["Cenoura e Brigadeiro"]
+      ingredients: ["Cenoura", "Brigadeiro"]
     }
   },
   {
@@ -444,7 +444,7 @@ export const products = [
     details: {
       weight: "1kg",
       serves: "4 pessoas",
-      ingredients: ["Chocolate e Coco"]
+      ingredients: ["Chocolate", "Coco"]
     }
   }
 ];
