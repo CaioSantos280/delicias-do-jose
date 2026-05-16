@@ -16,6 +16,7 @@ export default function App() {
   const [visibleCount, setVisibleCount] = useState(6);
   const [activeCategory, setActiveCategory] = useState("Bolos Caseiros");
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [visibleReviews, setVisibleReviews] = useState(3);
 
   const filteredProducts = products.filter(
     (item) => item.category === activeCategory
@@ -101,24 +102,38 @@ export default function App() {
       handlePedido={handlePedido}
     />
         {/* REVIEWS */}
-        <section id="avaliacoes" className="px-6 lg:px-20 py-20">
-          <div className="max-w-7xl mx-auto text-center mb-14">
-            <h2 className="text-4xl lg:text-5xl font-black">
-              O que nossos clientes dizem
-            </h2>
-            <p className="text-[#cdb7a2] mt-4 text-lg">
-              Feedback real de quem já provou e voltou a pedir.
-            </p>
-          </div>
-  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-    {reviews.map((review) => (
-      <ReviewCard
-        key={review.id}
-        review={review}
-        onClick={(r) => window.open(r.image, "_blank")}
-      />
-    ))}
+<section id="avaliacoes" className="px-6 lg:px-20 py-20">
+  <div className="max-w-7xl mx-auto text-center mb-14">
+    <h2 className="text-4xl lg:text-5xl font-black">
+      O que nossos clientes dizem
+    </h2>
+    <p className="text-[#cdb7a2] mt-4 text-lg">
+      Feedback real de quem já provou e voltou a pedir.
+    </p>
   </div>
+
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    {reviews
+      .slice(0, visibleReviews)
+      .map((review) => (
+        <ReviewCard
+          key={review.id}
+          review={review}
+          onClick={(r) => window.open(r.image, "_blank")}
+        />
+      ))}
+  </div>
+
+  {visibleReviews < reviews.length && (
+    <div className="flex justify-center mt-14">
+      <button
+        onClick={() => setVisibleReviews((prev) => prev + 3)}
+        className="bg-yellow-500 text-black px-8 py-4 rounded-2xl font-bold hover:scale-105 transition-all duration-300"
+      >
+        Mostrar mais
+      </button>
+    </div>
+  )}
 </section>
       <Footer />
 
