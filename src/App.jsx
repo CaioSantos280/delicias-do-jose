@@ -209,6 +209,7 @@ export default function App() {
                   ) : (
                     <video
                       src={`/${item.src}`}
+                      poster={`/${selectedProduct.media?.[0]?.src}`}
                       controls
                       preload="metadata"
                       muted

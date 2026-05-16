@@ -410,7 +410,7 @@ export const products = [
     },
     {
       type: "video",
-      src: "pmaracujacombrigadeiro.mp4"
+      src: "videos/pmaracujacombrigadeiro.mp4"
     }],
     description: "Doce e azedo equilibrado.",
     details: {
