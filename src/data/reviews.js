@@ -14,4 +14,9 @@ export const reviews = [
     image: "/reviews/review3.jpeg",
     name: "Cliente 3",
   },
+  {
+    id: 4,
+    image: "/reviews/review4.jpeg",
+    name: "Cliente 4",
+  },
 ];
