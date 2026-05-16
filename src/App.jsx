@@ -2,11 +2,13 @@ import React, { useState } from "react";
 
 import { STORE_CONFIG } from "./config/store";
 import { products } from "./data/products";
+import { reviews } from "./data/reviews";
 
 import ProductModal from "./components/ProductModal";
 import ProductCard from "./components/ProductCard";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import ReviewCard from "./components/ReviewCard";
 
 const categories = ["Bolos Caseiros", "Piscininhas"];
 
@@ -27,7 +29,7 @@ export default function App() {
       `https://wa.me/${celular}?text=${encodeURIComponent(texto)}`;
     window.open(linkZap, "_blank");
   };
-  
+
   return (
     <div className="bg-[#1f130d] text-[#f7efe2] overflow-x-hidden min-h-screen">
       {/* Background Glow */}
@@ -93,12 +95,31 @@ export default function App() {
           )}
         </div>
       </section>
-      <ProductModal
-        selectedProduct={selectedProduct}
-        setSelectedProduct={setSelectedProduct}
-        handlePedido={handlePedido}
+    <ProductModal
+      selectedProduct={selectedProduct}
+      setSelectedProduct={setSelectedProduct}
+      handlePedido={handlePedido}
+    />
+        {/* REVIEWS */}
+        <section id="avaliacoes" className="px-6 lg:px-20 py-20">
+          <div className="max-w-7xl mx-auto text-center mb-14">
+            <h2 className="text-4xl lg:text-5xl font-black">
+              O que nossos clientes dizem
+            </h2>
+            <p className="text-[#cdb7a2] mt-4 text-lg">
+              Feedback real de quem já provou e voltou a pedir.
+            </p>
+          </div>
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    {reviews.map((review) => (
+      <ReviewCard
+        key={review.id}
+        review={review}
+        onClick={(r) => window.open(r.image, "_blank")}
       />
-
+    ))}
+  </div>
+</section>
       <Footer />
 
     </div>
