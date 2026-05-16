@@ -145,10 +145,14 @@ export default function App() {
         </div>
       </section>
       <ProductModal
-        selectedProduct={selectedProduct}
-        setSelectedProduct={setSelectedProduct}
-        handlePedido={handlePedido}
-      />
-    </div>
+  selectedProduct={selectedProduct}
+  setSelectedProduct={setSelectedProduct}
+  handlePedido={handlePedido}
+/>
+
+<Footer />
+
+</div>
+    
   );
 }
