@@ -1,7 +1,7 @@
 export const products = [
   {
     id: 1,
-    name: "Paçoca",
+    name: "Bolo de Paçoca",
     category: "Bolos Caseiros",
     price: "R$ 18",
     media: [{
@@ -17,7 +17,7 @@ export const products = [
   },
   {
     id: 2,
-    name: "Morango",
+    name: "Bolo de Morango",
     category: "Bolos Caseiros",
     price: "R$ 18",
     media: [{
@@ -33,7 +33,7 @@ export const products = [
   },
   {
     id: 3,
-    name: "Abacaxi",
+    name: "Bolo de Abacaxi",
     category: "Bolos Caseiros",
     price: "R$ 18",
     media: [{
@@ -49,7 +49,7 @@ export const products = [
   },
   {
     id: 4,
-    name: "Coco",
+    name: "Bolo de Coco",
     category: "Bolos Caseiros",
     price: "R$ 18",
     media: [{
@@ -65,7 +65,7 @@ export const products = [
   },
   {
     id: 5,
-    name: "Formigueiro",
+    name: "Bolo Formigueiro",
     category: "Bolos Caseiros",
     price: "R$ 18",
     media: [{
@@ -81,7 +81,7 @@ export const products = [
   },
   {
     id: 6,
-    name: "Fubá com Coco",
+    name: "Bolo de Fubá com Coco",
     category: "Bolos Caseiros",
     price: "R$ 18",
     media: [{
@@ -97,7 +97,7 @@ export const products = [
   },
   {
     id: 7,
-    name: "Fubá com Erva-doce",
+    name: "Bolo de Fubá com Erva-doce",
     category: "Bolos Caseiros",
     price: "R$ 18",
     media: [{
@@ -113,7 +113,7 @@ export const products = [
   },
   {
     id: 8,
-    name: "Mesclado",
+    name: "Bolo de Mesclado",
     category: "Bolos Caseiros",
     price: "R$ 18",
     media: [{
@@ -129,7 +129,7 @@ export const products = [
   },
   {
     id: 9,
-    name: "Amendoim",
+    name: "Bolo de Amendoim",
     category: "Bolos Caseiros",
     price: "R$ 18",
     media: [{
@@ -145,7 +145,7 @@ export const products = [
   },
   {
     id: 10,
-    name: "Cenoura",
+    name: "Bolo de Cenoura",
     category: "Bolos Caseiros",
     price: "R$ 22",
     media: [{
@@ -161,7 +161,7 @@ export const products = [
   },
   {
     id: 11,
-    name: "Banana",
+    name: "Bolo de Banana",
     category: "Bolos Caseiros",
     price: "R$ 22",
     media: [{
@@ -177,7 +177,7 @@ export const products = [
   },
   {
     id: 12,
-    name: "Churros",
+    name: "Bolo de Churros",
     category: "Bolos Caseiros",
     price: "R$ 22",
     media: [{
@@ -193,7 +193,7 @@ export const products = [
   },
   {
     id: 13,
-    name: "Fubá com Goiabada",
+    name: "Bolo de Fubá com Goiabada",
     category: "Bolos Caseiros",
     price: "R$ 22",
     media: [{
@@ -209,7 +209,7 @@ export const products = [
   },
   {
     id: 14,
-    name: "Milho Cremoso",
+    name: "Bolo de Milho Cremoso",
     category: "Bolos Caseiros",
     price: "R$ 22",
     media: [{
@@ -225,7 +225,7 @@ export const products = [
   },
   {
     id: 15,
-    name: "Ninho",
+    name: "Bolo de Ninho",
     category: "Bolos Caseiros",
     price: "R$ 22",
     media: [{
@@ -241,7 +241,7 @@ export const products = [
   },
   {
     id: 16,
-    name: "Aipim",
+    name: "Bolo de Aipim",
     category: "Bolos Caseiros",
     price: "R$ 25",
     media: [{
@@ -257,7 +257,7 @@ export const products = [
   },
   {
     id: 17,
-    name: "Abacaxi com Coco",
+    name: "Bolo de Abacaxi com Coco",
     category: "Bolos Caseiros",
     price: "R$ 25",
     media: [{
@@ -273,7 +273,7 @@ export const products = [
   },
   {
     id: 18,
-    name: "Chocolate Premium",
+    name: "Bolo de Chocolate (Premium)",
     category: "Bolos Caseiros",
     price: "R$ 25",
     media: [{
@@ -289,7 +289,7 @@ export const products = [
   },
   {
     id: 19,
-    name: "Limão",
+    name: "Piscininha de Limão",
     category: "Piscininhas",
     price: "R$ 18",
     media: [{
@@ -305,7 +305,7 @@ export const products = [
   },
   {
     id: 20,
-    name: "Limão e Brigadeiro",
+    name: "Piscininha de Limão e Brigadeiro",
     category: "Piscininhas",
     price: "R$ 22",
     media: [{
@@ -321,7 +321,7 @@ export const products = [
   },
   {
     id: 21,
-    name: "Brigadeiro",
+    name: "Piscininha de Bolo de Brigadeiro",
     category: "Piscininhas",
     price: "R$ 22",
     media: [{
@@ -337,7 +337,7 @@ export const products = [
   },
   {
     id: 22,
-    name: "Brigadeiro Branco e Preto",
+    name: "Piscininha de Brigadeiro Branco e Preto",
     category: "Piscininhas",
     price: "R$ 22",
     media: [{
@@ -353,7 +353,7 @@ export const products = [
   },
   {
     id: 23,
-    name: "Maracujá",
+    name: "Piscininha de Maracujá",
     category: "Piscininhas",
     price: "R$ 22",
     media: [{
@@ -369,7 +369,7 @@ export const products = [
   },
   {
     id: 24,
-    name: "Ninho",
+    name: "Piscininha de Ninho",
     category: "Piscininhas",
     price: "R$ 22",
     media: [{
@@ -385,7 +385,7 @@ export const products = [
   },
   {
     id: 25,
-    name: "Ninho e Brigadeiro",
+    name: "Piscininha de Ninho e Brigadeiro",
     category: "Piscininhas",
     price: "R$ 22",
     media: [{
@@ -401,7 +401,7 @@ export const products = [
   },
   {
     id: 26,
-    name: "Maracujá e Brigadeiro",
+    name: "Piscininha de Maracujá e Brigadeiro",
     category: "Piscininhas",
     price: "R$ 22",
     media: [{
@@ -421,7 +421,7 @@ export const products = [
   },
   {
     id: 27,
-    name: "Cenoura Piscininha",
+    name: "Piscininha de Cenoura",
     category: "Piscininhas",
     price: "R$ 22",
     media: [{
@@ -437,7 +437,7 @@ export const products = [
   },
   {
     id: 28,
-    name: "Prestígio",
+    name: "Piscininha de Prestígio",
     category: "Piscininhas",
     price: "R$ 22",
     media: [{
