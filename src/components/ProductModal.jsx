@@ -24,7 +24,6 @@ export default function ProductModal({
        initial={{ scale: 0.9, opacity: 0 }}
        animate={{ scale: 1, opacity: 1 }}
        exit={{ scale: 0.9, opacity: 0 }}
-       // Mudei de max-w-5xl para max-w-lg (ou max-w-md se quiser ainda menor)
       className="bg-[#24150f] border border-[#4a3022] rounded-[32px] max-w-lg w-[95%] overflow-hidden relative">
         <button
           onClick={() => setSelectedProduct(null)}
