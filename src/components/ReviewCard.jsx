@@ -8,31 +8,31 @@ export default function ReviewCard({ review, onClick }) {
   return (
     <div
       onClick={() => onClick(review)}
-      className="cursor-pointer rounded-3xl bg-[#2a1812] border border-[#3a241a] overflow-hidden hover:scale-[1.02] transition-all duration-300 shadow-lg"
+      className="bg-[#2a1911]/90 border border-[#4a3022] rounded-[32px] overflow-hidden backdrop-blur-md shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer"
     >
       {/* HEADER */}
-      <div className="flex items-center gap-3 p-4">
+      <div className="flex items-center gap-3 p-5 border-b border-[#4a3022]/50">
         <div className="w-10 h-10 rounded-full bg-yellow-500 text-black flex items-center justify-center font-bold">
           {initials}
         </div>
 
-        <div>
-          <p className="font-semibold text-sm text-[#f7efe2]">
+        <div className="flex flex-col">
+          <p className="font-semibold text-[#f7efe2] text-sm">
             {review.name || "Cliente satisfeito"}
           </p>
-          <p className="text-xs text-[#cdb7a2]">★★★★★</p>
+          <p className="text-xs text-[#cdb7a2]">
+            ★★★★★
+          </p>
         </div>
       </div>
 
       {/* IMAGE */}
-      <div className="px-4 pb-4">
-        <div className="rounded-2xl overflow-hidden border border-[#3a241a]">
-          <img
-            src={review.image}
-            alt="Avaliação"
-            className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-          />
-        </div>
+      <div className="relative w-full aspect-[4/5] overflow-hidden">
+        <img
+          src={review.image}
+          alt="Avaliação"
+          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+        />
       </div>
     </div>
   );
