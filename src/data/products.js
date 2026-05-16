@@ -369,7 +369,7 @@ export const products = [
   },
   {
     id: 24,
-    name: "Ninho Piscininha",
+    name: "Ninho",
     category: "Piscininhas",
     price: "R$ 22",
     media: [{
@@ -407,6 +407,10 @@ export const products = [
     media: [{
       type: "image",
       src: "pmaracujacombrigadeiro.jpeg"
+    },
+    {
+      type: "video",
+      src: "pmaracujacombrigadeiro.mp4"
     }],
     description: "Doce e azedo equilibrado.",
     details: {
